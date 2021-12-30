@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 import br.com.cleberbarros.cbalgafoodapi.CbAlgafoodApiApplication;
 import br.com.cleberbarros.cbalgafoodapi.domain.model.Cozinha;
 
-public class ConsultaCozinhaMain {
+public class BuscaCozinhaMain {
 	
 	public static void main(String[] args) {
 		
@@ -19,10 +19,11 @@ public class ConsultaCozinhaMain {
 				
 		CadastroCozinha cadastroCozinha = applicationContext.getBean(CadastroCozinha.class);
 		
-		Cozinha cozinha = cadastroCozinha.buscar(1L);
+		List<Cozinha> cozinhas = cadastroCozinha.listar();
 		
-		System.out.println(cozinha.getNome());
-		
+		for (Cozinha cozinha : cozinhas) {
+			System.out.println(cozinha.getNome());
+		}
 		
 	}
 }
