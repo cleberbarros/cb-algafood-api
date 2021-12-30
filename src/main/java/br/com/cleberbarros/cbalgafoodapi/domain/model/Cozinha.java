@@ -21,25 +21,5 @@ public class Cozinha {
   private Long id;
   
   private String nome;
-
-
-@Override
-public int hashCode() {
-	return Objects.hash(id);
-}
-
-@Override
-public boolean equals(Object obj) {
-	if (this == obj)
-		return true;
-	if (obj == null)
-		return false;
-	if (getClass() != obj.getClass())
-		return false;
-	Cozinha other = (Cozinha) obj;
-	return Objects.equals(id, other.id);
-}
-	
-  
   
 }
