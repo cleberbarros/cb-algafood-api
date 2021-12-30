@@ -28,7 +28,7 @@ public class CadastroCozinha {
 	}
 	
 	@Transactional //Necessário ter uma transação de banco de dados
-	public Cozinha adicionar(Cozinha cozinha) {
+	public Cozinha salvar(Cozinha cozinha) {
 		return manager.merge(cozinha);
 	}
 

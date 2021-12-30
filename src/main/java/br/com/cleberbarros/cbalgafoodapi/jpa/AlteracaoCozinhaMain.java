@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 import br.com.cleberbarros.cbalgafoodapi.CbAlgafoodApiApplication;
 import br.com.cleberbarros.cbalgafoodapi.domain.model.Cozinha;
 
-public class InclusaoCozinhaMain {
+public class AlteracaoCozinhaMain {
 	
 	public static void main(String[] args) {
 		
@@ -19,15 +19,17 @@ public class InclusaoCozinhaMain {
 				
 		CadastroCozinha cadastroCozinha = applicationContext.getBean(CadastroCozinha.class);
 		
-		Cozinha cozinha = new Cozinha();
-		cozinha.setId(1L);
-		cozinha.setNome("Brazil!");
+		Cozinha cozinha1 = new Cozinha();
+		cozinha1.setNome("BR");
 		
+		Cozinha cozinha2 = new Cozinha();
+		cozinha2.setNome("PT");
 		
-	 	cozinha = cadastroCozinha.salvar(cozinha);
+	 	cozinha1 = cadastroCozinha.salvar(cozinha1);
+		cozinha2 = cadastroCozinha.salvar(cozinha2);
 		
-		
-		System.out.println("Cozinha = "+cozinha.getId()+" - "+cozinha.getNome());
+		System.out.println("Cozinha1 = "+cozinha1.getId()+" - "+cozinha1.getNome());
+		System.out.println("Cozinha2 = "+cozinha2.getId()+" - "+cozinha2.getNome());
 		
 		
 	}
