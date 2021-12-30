@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 
 import br.com.cleberbarros.cbalgafoodapi.CbAlgafoodApiApplication;
 import br.com.cleberbarros.cbalgafoodapi.domain.model.Cozinha;
+import br.com.cleberbarros.cbalgafoodapi.domain.repository.CozinhaRepository;
 
 public class AlteracaoCozinhaMain {
 	
@@ -17,7 +18,7 @@ public class AlteracaoCozinhaMain {
 				.web(WebApplicationType.NONE)
 				.run(args);
 				
-		CadastroCozinha cadastroCozinha = applicationContext.getBean(CadastroCozinha.class);
+		CozinhaRepository cadastroCozinha = applicationContext.getBean(CozinhaRepository.class);
 		
 		Cozinha cozinha1 = new Cozinha();
 		cozinha1.setNome("BR");
