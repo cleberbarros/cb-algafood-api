@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.cleberbarros.cbalgafoodapi.domain.model.Cozinha;
 import br.com.cleberbarros.cbalgafoodapi.domain.repository.CozinhaRepository;
 
-
+//teste
 @RestController //Substitutui as anotações @RequestBoby e @Controller
 
 // procuces pode ser usando também no @RequestMapping
